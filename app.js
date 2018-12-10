@@ -31,10 +31,10 @@ app.post("/signup", (req, res) => {
   };
   const postData = JSON.stringify(data);
   const options = {
-    url: "https://us19.api.mailchimp.com/3.0/lists/a9319b3155",
+    url: "https://<add yours us>.api.mailchimp.com/3.0/lists/<add your id>",
     method: "Post",
     headers: {
-      Authorization: "auth 64102999d73162b735d67f074e8f761c-us19"
+      Authorization: "auth <add your API>"
     },
     body: postData
   };
@@ -50,6 +50,6 @@ app.post("/signup", (req, res) => {
     }
   });
 });
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3000;
 
 app.listen(port, console.log(`listen on port ${port}`));
